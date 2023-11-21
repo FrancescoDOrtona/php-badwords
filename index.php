@@ -11,16 +11,24 @@ $text_length = strlen ( $text );
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Censura una parola</h1>
-    <h4>Scegli una parola da censurare nel testo e scrivila nel campo sottostante</h4>
-    <p><?php echo $text ?></p>   
-    <small>Il testo è lungo <?php echo $text_length ?> caratteri</small>
-    <form action="text.php" method="POST">
-        <input type="text" name="replace_word" placeholder="Inserisci qui la parola" >
-        <input type="submit" value="Invia">
-    </form>
+    <div class="container">
+        <div class="header">
+            <h1>Censura una parola</h1>
+            <h4>Scegli una parola da censurare nel testo e scrivila nel campo sottostante</h4>
+        </div>
+        
+        <p><?php echo $text ?></p> 
+        <div class="counter">
+            <small>Il testo è lungo <?php echo $text_length ?> caratteri</small>
+        </div>
+        <form class="page-form" action="text.php" method="POST">
+            <input id="text-input" type="text" name="replace_word" placeholder="Inserisci qui la parola" >
+            <input id="submit-btn" type="submit" value="Invia">
+        </form>
+    </div>
 </body>
 </html>

@@ -12,11 +12,18 @@ $replaced__text = str_replace($replaced_word, '***' , $text) ;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Testo Censurato:</h1>
-    <p><?php echo $replaced__text ?></p>
-    <small>Il nuovo testo è lungo <?php echo strlen($replaced__text) ?>caratteri</small>
+    <div class="container">
+        <div class="header">
+            <h1>Testo Censurato:</h1>
+        </div>
+        <p><?php echo $replaced__text ?></p>
+        <div class="counter">
+            <small>Il nuovo testo è lungo <?php echo strlen($replaced__text) ?>caratteri</small>
+        </div>
+    </div>
 </body>
 </html>
