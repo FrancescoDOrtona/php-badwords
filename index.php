@@ -14,12 +14,10 @@ $text = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam velit e
 <body>
     <h1>Censura una parola</h1>
     <h4>Scegli una parola da censurare nel testo e scrivila nel campo sottostante</h4>
-    <p>
-        <?php echo $text ?>
-    </p>
+    <p><?php echo $text ?></p>   
     <small>Il testo è lungo <?php echo strlen($text); ?> caratteri</small>
-    <form action="text.php">
-        <input type="text" placeholder="Inserisci qui la parola">
+    <form action="text.php" method="POST">
+        <input type="text" name="replace_word" placeholder="Inserisci qui la parola" >
         <input type="submit" value="Invia">
     </form>
 </body>
